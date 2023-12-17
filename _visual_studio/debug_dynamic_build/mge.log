@@ -1,0 +1,24 @@
+﻿  main.cpp
+C:\3d-rendering\src\main.cpp(115,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\3d-rendering\src\main.cpp(116,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\3d-rendering\src\main.cpp(118,98): warning C4244: 'argument': conversion from 'T' to 'GLfloat', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\3d-rendering\src\main.cpp(118,78): warning C4244: 'argument': conversion from 'T' to 'GLfloat', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  ShaderUtil.cpp
+  Generating Code...
+  mge.vcxproj -> C:\3d-rendering\_visual_studio\debug_dynamic_exe\sample.exe

@@ -25,8 +25,9 @@
 *.la
 *.a
 *.lib
-
+/_codeblocks
 # Executables
 *.exe
 *.out
 *.app
+*.opendb
