@@ -35,7 +35,8 @@ void main(void) {
 
     vec2 center = fColor.xy - vec2(0.5f,0.5f);
 
-    vec2 gridSize = vec2(length(fColor.xy ) / angularStep, 1.0 / cols);
+    vec2 effectSize = vec2(length(fColor.xy ) / angularStep, 1.0 / cols);
+    vec2 gridSize = vec2(1.0 /rows, 1.0 / cols);
     float scale = 2;
 
     mat2 rotationMatrix = mat2(cos(rotationAngle), -sin(rotationAngle), 
@@ -44,7 +45,7 @@ void main(void) {
 
     vec2 scaledCoords = (rotatedCoords  * scaling/scale);
 
-    vec2 gridIndex = floor(scaledCoords / gridSize);
+    vec2 gridIndex = floor(scaledCoords / effectSize);
     vec3 color;
     float distToMouse =length((fColor.yx) - mouseNormalized);
 

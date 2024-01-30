@@ -1,0 +1,29 @@
+﻿  KeysBehaviour.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  RotatingBehaviour.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  AbstractGame.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  Camera.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  GameObject.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  Light.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  Mesh.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  Renderer.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  ShaderProgram.cpp
+  World.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  AbstractMaterial.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  ColorMaterial.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  TextureMaterial.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  MGEDemo.cpp
+C:\3d-rendering\week2\mge_v19_student_version(1) (1)\mge_v19_student_version\src\glm.hpp(9,10): fatal  error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  DebugHud.cpp
+  Generating Code...

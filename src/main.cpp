@@ -47,15 +47,28 @@ int main() {
 		0.5f,  0.5f, 0  // right top
 	};
 
+	const GLfloat vertices2[] = {
+		//1 triangle, 3 vertices per triangle, 3 floats per vertex = 9 floats in total
+		-0.5f, -0.5f, 0, // left bot
+		0.5f, -0.5f, 0, // right bot
+		-0.5f, 0.5f, 0, // left top
+		-0.5f,  0.5f, 0,  // left top
+		0.5f, -0.5f, 0,  // right bot
+		0.5f,  0.5f, 0  // right top
+	};
 	//create a handle to the buffer
 	GLuint vertexBufferId;
+	GLuint vertexBufferId2;
 	glGenBuffers(1, &vertexBufferId);
+	glGenBuffers(1, &vertexBufferId2);
 	//bind our buffer to the GL_ARRAY_BUFFER endpoint, since none was bound yet,
 	//a new array buffer for vertex position data will be created
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBufferId);
+	glBindBuffer(GL_ARRAY_BUFFER, vertexBufferId2);
 	//stream all our data to the array buffer endpoint to which our vertexPositionsBufferId is connected
 	//note that vertexPositionsBufferId is not mentioned, instead the ARRAY_BUFFER is set as the data "sink"
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
 	//disconnect the funnel
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -69,15 +82,29 @@ int main() {
 		0,0,0// right top
 	};
 
+	const GLfloat colors2[]{
+		//1 triangle, 3 vertices per triangle, 1 color per vertex, 3 "floats" per color RGB = 9 floats in total
+		0,0,0,// left bot
+		0,1,0,// right bot
+		1,0,0,// left top
+		0,1,0,// right bot
+		1,0,0,// left top
+		0,0,0// right top
+	};
+
 	//create a handle to the buffer
 	GLuint colorBufferId;
+	GLuint colorBufferId2;
 	glGenBuffers(1, &colorBufferId);
+	glGenBuffers(1, &colorBufferId2);
 	//bind our buffer to the GL_ARRAY_BUFFER endpoint, since none was bound yet,
 	//a new array buffer for vertex color data will be created
 	glBindBuffer(GL_ARRAY_BUFFER, colorBufferId);
+	glBindBuffer(GL_ARRAY_BUFFER, colorBufferId2);
 	//stream all our data to the array buffer endpoint to which our vertexColorsBufferId is connected
 	//note that vertexColorsBufferId is not mentioned, instead the ARRAY_BUFFER is set as the data "sink"
 	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(colors2), colors2, GL_STATIC_DRAW);
 	//disconnect the funnel
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -141,6 +168,8 @@ int main() {
 		//the moment this buffer is bound instead of 0, the last param of glVertexAttribPointer
 		//is interpreted as an offset and not a pointer
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBufferId);
+		glBindBuffer(GL_ARRAY_BUFFER, vertexBufferId2);
+
 		//send the data for this index to OpenGL, specifying it's format and structure
 		//vertexIndex // 3 bytes per element // floats // don't normalize // the data itself
 		glVertexAttribPointer(vertexIndex, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
@@ -148,6 +177,8 @@ int main() {
 		//send the data for this index to OpenGL, specifying it's format and structure
 		//colorIndex // 3 bytes per element // floats // don't normalize // the data itself
 		glBindBuffer(GL_ARRAY_BUFFER, colorBufferId);
+		glBindBuffer(GL_ARRAY_BUFFER, colorBufferId2);
+
 		glVertexAttribPointer(colorIndex, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
 		//Draws elements from each enabled array using the specified mode (which is default for Unity etc as well)
